@@ -1,0 +1,92 @@
+{% extends "base.twig" %}
+
+{% block mainContent %}
+    <div class="lg:px-4 pb-12">
+        <h2 class="text-3xl sm:text-4xl pb-4 text-font-title">Game Development</h2>
+        <p class="mb-4">
+            During my time at the {% include './Components/extLink.twig' with {'link' : "https://games-academy.de/", 'content': 'Games Academy'} %}, I gained first-hand, practical experience in game development.
+            I spent the first two of my five semesters at GA as a game design student and the last three as a game programmer.
+            Throughout this time, I was able to experience the many facets of game development with curiosity and enthusiasm. Each semester consisted of developing a project within eight weeks.
+            All departments represented in the games industry were staffed by students from different departments at GA.
+            This allowed us to simulate a practice-oriented small indie studio and experience first-hand how game development works.
+            From brainstorming to the conceptualization and design phase, full production, and finally to the gold master.
+            We weren't spared the stress of deadlines either, and some would even report occasional crunch times, but that's just nonsense, of course (or is it?).
+        </p>
+        <p class="mb-4">
+            By the end of my time as a student at GA, I was able to develop up to five semester projects, although the first one was a special exception.
+            The first project in the basic semester (the first semester) takes place exclusively within your own course. As a result, the subject areas and departments are not divided efficiently.
+            The specifications and technical know-how are also not yet well developed at this stage. This means that the quality differs greatly from the subsequent projects.
+            For this reason, it does not feature prominently in the portfolio, but I don't want to withhold it from you either.
+        </p>
+        <p class="mb-4">
+            Possible Mentions:</br>
+            - C++ RPG Project</br>
+            - C# Game Engine
+        </p>
+    </div>
+
+    <div class="relative card-group flex flex-col gap-8 lg:gap-4 pt-4">
+        {% for project in [
+            {
+                'link':"https://red-rocket-games.itch.io/crimson-star",
+                'extLink':true,
+                'tags':["Unity", "Multiplayer", "C#"],
+                'time':"2025 — 2025",
+                'title':"Crimson Star",
+                'description':"The last Project at the Games Academy was a multiplayer, ship building, twin-stick, arena fighter.
+                My main tasks were the multiplayer networking code and stability. But as the lead programmer,
+                I was involved in task delegation and coordination of four other programmers."
+            },
+            {
+                'link':"https://games-academy.itch.io/kyoto-conflict",
+                'extLink':true,
+                'tags':["UE5", "Multiplayer", "Blueprint", "C++"],
+                'time':"2024 — 2025",
+                'title':"Kyoto Conflict",
+                'description':"Kyoto Conflict is a fast-paced, first-person shooter, honouring the ancestors of unreal tournament and quake.
+                The goal was to achieve a fast and action packed first-person shooter.
+                A huge focus put on the movement system enabling bunny hoping and ever accelerating movement.
+                Combining fast movement and precise shooting over the network was a big challenge, that I had to overcome.
+                In a programming department of just two programmers, this task was enormous but in the end we could present a stable and reliable experience."
+            },
+            {
+                'link':"https://games-academy.itch.io/steambrawl",
+                'extLink':true,
+                'tags':["UE5", "Multiplayer", "Blueprint"],
+                'time':"2024 — 2024",
+                'title':"Steambrawl",
+                'description':"[[INSERT Steambrawl DESCRIPTION]]"
+            },
+            {
+                'link':"https://games-academy.itch.io/aeternox",
+                'extLink':true,
+                'tags':["UE5", "UI Development", "Blueprint"],
+                'time':"2023 — 2024",
+                'title':"Aeternox",
+                'description':"[[INSERT Aeternox DESCRIPTION]]"
+            },
+            {
+                'link':"https://games-academy.itch.io/girlz-tankz-n-gunz",
+                'extLink':true,
+                'tags':["Unity", "Programming", "C#"],
+                'time':"2023 — 2023",
+                'title':"GirlZ, TankZ 'N GunZ",
+                'description':"This is the first project at the Games Academy I was part of. As mentioned earlier, this was the project that was developed in the basic semester.
+                I was the only programmer in the team, and relied heavily on my previous experience in own hobbyist projects and my spare time.
+                But I was accompanied by very talented artist and a producer, with some prior experience in similar positions.
+                Many mistakes were made, but a lot more was learned and very bonding friendship was build, which helped to get settled into the Games Academy."
+            },
+        ] %}
+
+            {% embed './Components/card.twig' with {'card_link' : project.link, 'ext_link' : project.extLink ,'tags': project.tags, 'card_time': project.time} %}
+                {% block cardTitle %}
+                    {{ project.title }}
+                {% endblock %}
+                {% block cardDescription %}
+                    {{ project.description }}
+                {% endblock %}
+            {% endembed %}
+
+        {% endfor %}
+    </div>
+{% endblock %}

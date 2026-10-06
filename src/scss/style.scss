@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+$primary-color: #01313d;
+$accent-color: #f3a238;
+$font-color: #ffe6d1;
+
+@theme {
+  --color-primary: #01313d;
+  --color-accent: #f3a238;
+  --color-font: #ffe6d1;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  color: $font-color;
+
+  a {
+    color: red;
+  }
+}

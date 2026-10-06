@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #012026;
+    --color-primary-offset: #012826;
+    --color-secondary: #f8ad59;
+    --color-secondary-light: rgba(229, 136, 16, 0.5);
+    --color-tertiary: #056b79;
+    --color-font-title: #f1f0f0;
+    --color-font: #81bbaa;
+    --color-font-highlight: #31efc3;
+
+    --breakpoint-xs: 30rem;
+
+    --text-xl: 1.25rem;
+    --text-lg: 1rem;
+    --text-md: .9rem;
+    --text-sm: .8rem;
+}
+
+:root {
+    font-family: Inter, monospace;
+    text-align: justify;
+}
+
+a:not(.clean) {
+    @apply interactable;
+}
+
+h1 { @apply text-4xl sm:text-5xl font-bold text-font-title }
+h2 { @apply text-2xl sm:text-3xl text-font-title }
+h3 { @apply text-xl text-font-title }
+
+.social-icon .fa-brands {
+    width: 1rem;
+}
+
+@utility background-gradient {
+    background: #01313D;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-offset) 100%);
+}
+
+@utility glass-background {
+    border-radius: 6px;
+    border-top: solid 1px rgba(155, 207, 208, 0.25);
+    border-bottom: solid 1px rgba(155, 207, 208, 0.125);
+    background-image: linear-gradient(to bottom right, rgba(30, 56, 59, 0.5), rgba(37, 70, 73, 0.5));
+}
+@utility glass-highlight {
+    border-radius: 6px;
+    border-top: solid 1px rgba(155, 207, 208, 0.3);
+    border-bottom: solid 1px rgba(155, 207, 208, 0.15);
+    background-image: linear-gradient(to bottom right, rgba(30, 59, 55, 0.5), rgba(37, 73, 67, 0.5));
+}
+
+
+@utility interactable {
+    @apply text-font-title hover:text-font-highlight
+}
+@utility interactable {
+    transition: color .125s ease-in-out;
+}
+
+
+@layer components {
+    .social-icon {
+        @apply interactable text-xl lg:text-2xl;
+    }
+    .social-icon {
+        line-height: 1rem;
+    }
+    .nav-link {
+        @apply uppercase text-xs font-bold;
+    }
+
+    .card-element {
+        transition: opacity .125s ease-in-out;
+    }
+    .card-element {
+        @apply lg:px-4 lg:p-2
+    }
+
+    .card-element .glass-background {
+        position: absolute;
+
+        /*top: 0;*/
+        /*bottom: 0;*/
+        /*left: 0;*/
+        /*right: 0;*/
+
+        opacity: 0;
+
+        border-top: solid 1px transparent;
+        border-bottom: solid 1px transparent;
+        background-image: linear-gradient(110deg, transparent, transparent);
+
+        transition: opacity .125s ease-in-out;
+        z-index: -1;
+    }
+    .card-element:hover .glass-background {
+        opacity: 1;
+    }
+
+    .follow-arrow {
+        opacity: 0;
+        margin-left: -0.5rem;
+        transition: margin-left .125s ease-in-out, opacity .125s ease-in-out;
+    }
+    .card-title {
+        color: var(--color-font-title);
+        transition: color .125s ease-in-out;
+    }
+
+    .tag-pill {
+        @apply rounded-full bg-secondary-light px-3 py-1 text-secondary text-xs uppercase font-bold
+    }
+}
+
+.card-group:hover .card-element {
+    opacity: .45;
+}
+.card-group .card-element:hover {
+    opacity: 1;
+}
+
+.card-element:hover .follow-arrow{
+    margin-left: -.25rem;
+    opacity: 1;
+    color: var(--color-font-highlight);
+}
+.card-element:hover .card-title {
+    color: var(--color-font-highlight);
+}

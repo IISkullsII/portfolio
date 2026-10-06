@@ -1,0 +1,21 @@
+{
+  "name": "own_portfolio_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "BuildCSSMinified": "concurrently --kill-others \"npx sass --watch src\\scss\\style.scss src\\build\\css\\style.tmp.css\" \"npx @tailwindcss/cli -i .\\src\\build\\css\\style.tmp.css -o .\\public\\css\\style.css --watch --minify\"",
+    "BuildCSS": "concurrently --kill-others \"npx sass --watch src\\scss\\style.scss src\\build\\css\\style.tmp.css\" \"npx @tailwindcss/cli -i .\\src\\build\\css\\style.tmp.css -o .\\public\\css\\style.css --watch\"",
+    "BuildTailwind": "npx @tailwindcss/cli -i .\\src\\css\\style.css -o .\\public\\css\\style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

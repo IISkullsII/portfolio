@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|default("Portfolio Homepage") }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/2288800742.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-primary text-md relative lg:flex lg:justify-between lg:gap-4 px-6 sm:px-12 text-font min-h-screen max-w-screen-xl mx-auto background-gradient max-lg:flex max-lg:flex-col">
+    <div class="relative pt-6 lg:py-12 lg:w-[45%] lg:max-h-screen lg:flex lg:sticky lg:top-0">
+        <div class="py-6 xs:pb-12 lg:p-0 lg:flex lg:flex-grow flex-col lg:justify-between">
+            <header>
+                <div>
+                    <h1 class="text-4xl sm:text-5xl font-bold text-font-title">Marc Hoffmann</h1>
+                    <h3 class="text-2xl sm:text-2xl text-font-title">Game & Web Developer</h3>
+                </div>
+
+
+                <nav class="pt-6 pb-4">
+                    <ul>
+                        <li><a class="nav-link" href="/">About</a></li>
+                        <li><a class="nav-link" href="/game-dev">Game Dev</a></li>
+                        <li><a class="nav-link" href="/web-dev">Web Dev</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="pt-12 lg:pt-0">
+                <ul class="flex gap-4 lg:gap-6">
+                    <a class="lg:text-2xl interactable social-icon" href="https://www.linkedin.com/in/marc-hoffi-hoffmann" target="_blank">
+                        <li class=""><i class="fa-brands fa-linkedin-in"></i></li>
+                    </a>
+                    <a class="lg:text-2xl interactable social-icon" href="https://www.linkedin.com/in/marc-hoffi-hoffmann" target="_blank">
+                        <li class=""><i class="fa-brands fa-github"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="lg:w-[55%] pt-6 pb-6 lg:pt-12 lg:pl-6 lg:min-h-screen flex flex-col justify-between max-lg:flex-grow">
+        <main>
+            {% block mainContent %}{% endblock %}
+        </main>
+
+        <footer class="pt-12">
+            <p>&copy; {{ "now"|date("Y") }} - Portfolio Homepage</p>
+        </footer>
+    </div>
+
+</body>
+</html>

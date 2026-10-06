@@ -1,0 +1,32 @@
+{% if ext_link %}
+    <a class="clean" href="{{ card_link }}" target="_blank">
+{% else %}
+    <a class="clean" href="{{ card_link }}">
+{% endif %}
+    <div class="relative card-element sm:grid sm:grid-cols-12 sm:gap-4">
+        <div class="glass-background lg:left-0 lg:top-0 lg:right-0 lg:bottom-0 -left-4 -top-1 -right-4 -bottom-2"></div>
+        <div class="card-time text-xs sm:col-span-2 lg:col-span-3 sm:text-right">
+            <p class="sm:pt-1">{{ card_time }}</p>
+        </div>
+        <div class="card-content sm:col-span-10 lg:col-span-9">
+            <h3 class="card-title">
+                {% block cardTitle %}{% endblock %}<span class="follow-arrow text-xs">
+                    {% if ext_link %}
+                        <i class="fa-solid fa-arrow-up-right-from-square align-top mt-1"></i>
+                    {% else %}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    {% endif %}
+                </span>
+            </h3>
+            <p>
+                {% block cardDescription %}
+                {% endblock %}
+            </p>
+            <ul class="flex flex-row gap-2 pt-2">
+                {% for tag in tags %}
+                    <li class="tag-pill">{{ tag }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</a>

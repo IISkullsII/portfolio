@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{% block mainContent %}
+    <div class="lg:px-4 pb-12">
+        <h2 class="text-3xl sm:text-4xl pb-4 text-font-title">Web Development</h2>
+        <p class="mb-4">
+            Possible Mentions:<br>
+            - Twitch Sidebar - VueJS WebApp<br>
+            - Event Portal - Pano2VR + ProcessWire CMS<br>
+            - Prototype Tarté Flambée App - VueJS WebApp<br>
+        </p>
+        <p class="mb-4">
+            Skills:<br>
+            - Frontend Frameworks: VueJS<br>
+            - CMS Frameworks: MODx, ProcessWire, WordPress<br>
+            - Languages: TypeScript, JavaScript, HTML5, CSS3, PHP<br>
+            - Front- and Back-end Programming<br>
+            - Web design and -layout<br>
+        </p>
+    </div>
+
+    <div class="relative card-group flex flex-col gap-8 lg:gap-4 pt-4">
+        {% for project in [] %}
+
+            {% embed './Components/card.twig' with {'card_link' : project.link, 'ext_link' : project.extLink ,'tags': project.tags, 'card_time': project.time} %}
+                {% block cardTitle %}
+                    {{ project.title }}
+                {% endblock %}
+                {% block cardDescription %}
+                    {{ project.description }}
+                {% endblock %}
+            {% endembed %}
+
+        {% endfor %}
+    </div>
+{% endblock %}
