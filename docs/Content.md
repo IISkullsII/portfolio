@@ -76,3 +76,22 @@ Der Streamer konnte dann in dem Dashboard, die eingetragenen Spieler in den jewe
 ### Game Dav
 #### Short Summary
 #### Previous Projects
+##### Aeternox
+Zusammenfassung: Aeternox ist ein Action Adventure Spiel. Der Spieler schlüpft dabei in die Rolle des Protagonisten, der nach einer langen Reise in ein unbekanntes Dorf gelangt, auf der Suche nach seiner Prophezeihung. In diesem Dorf bitten ihn die Bewohner um Hilfe. Dabei erkennt der Protagonist seine wahre Bestimmung, nach der er so lange suchte. Sie war in diesem Dorf.
+Mit action basiertem Nahkampf behauptet sich der Spieler gegen seine Feinde. Dabei steigt der Spieler in Erfahrung und kann sein Spielstil nach seinen Wünschen verfeinern.
+Aufgabenstellung: In diesem Projekt übernahm ich vorrangig die Design Entscheidungen über den Erfahrungsgewinn, wodurch der Spieler zusätzliche Fähigkeiten seiner Spielfigur freischalten konnte. 
+Mein Ansatz war ein einfaches Konzept, das den Spieler vor wenigen, aber gleichzeitig signifikanten Entscheidungen stellte. Das Ziel war es, das Spielgefühl in zwei Richtungen zu ermöglichen. Ein schneller oder ein langsamerer Spielfluss, durch schnelle Aktionen oder wuchtigere Schläge.
+Auch ein wichtiger Aspekt war es, dem Spieler eine Belohnung in aussicht zu stellen, dass ein Anreiz vorhanden war, weitere Erfahrungspunkte zu sammeln.
+Dies sorgte dafür, dass der Spieler einen Pfad (Schnell oder Langsam) entlang, voranschreitet und am Ende eine große Belohnung erhielt, die den Spielstil nochmal ordentlich in die jeweilige Richtung brachte. Durch eine sogenannte ultimative Fähigkeit, die der Spieler dann fortan anwenden konnte.
+Zusätzlich sollte der Spieler aber auch allgemeine Spielfluss bezogene Verfeinerungen vornehmen können. Indem der Spieler z.B. in mehr Lebenspunkte oder mehr Ausdauer investieren konnte. Damit sollte gewährleistet werden, dass der Spieler allgemein stärker wurde und weniger Fehler stark bestraft würden.
+
+Zu beginn, da dies meine ersten Erfahrungen in der Unreal Engine 5 waren, habe ich auch die Aufgaben zur Erstellung von sogenannten Block-Outs übernommen. Dabei ging es vorrangig darum, eine grobe Skizze und Konzept eines Levels in sehr geringem Detailgrad zu erstellen. Dies sollte mir helfen, mich in dem Unreal Engine 5 Editor zurecht zu finden und mich an die Workflows zu gewöhnen. Später übernahm die Vervollständigung und Ausarbeitung der Level jemand anderes.
+
+Durch meine Vorerfahrung aus dem Web-Development, habe ich grundlegende Erfahrung im Layout und Design von GUIs, da diese recht ähnliche Anforderungen haben.
+Ich übernahm also die Erstellung und Gestaltung der GUI. Die Programmierer in dem Team haben zuvor Protypen an GUIs erstellt, um ihrere Gameplay Features testen zu können. Aufbauend auf diese GUIs habe ich die Anforderungen an GUI Elementen erhalten und dann, anhand dieser Anforderungen entsprechende GUIs erstellt. 
+Hierbei habe ich versucht, aufgrund der geringen Bearbeitungszeit für das Projekt und meine beschränkten Fähigkeiten in dem Editor zur dieser Zeit, die GUI Elemente schlicht und wirksam zu halten.
+Da ich bisher noch nie ein GUI für ein Spiel erstellt hatte, habe ich mich nach Referenzen umgesehen, die ein ähnliches Genre abbildeten, damit ich alle notwendigen GUI Elemente als Referenz habe. Anhand dieser Referenz habe ich dann die Strukturen übernommen und mit, aus dem Unterricht gelernten UI Designs angepasst.
+
+##### Steambrawl
+
+##### Crimson Star
